@@ -5,6 +5,9 @@ import { MeshDrift } from "@/components/mesh-drift";
 import { RoomScene } from "@/components/room-scene";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
+// Public page on the app's own domain: browsers only allow the install
+// dialog there, and it needs no sign-in.
+const INSTALL_URL = `${APP_URL.replace(/\/$/, "")}/install`;
 
 const HOW = [
   {
@@ -40,7 +43,7 @@ export default function Home() {
           <a href="#how">How it works</a>
           <a href="#faq">Questions</a>
         </nav>
-        <a className="nav-cta" href={APP_URL}>
+        <a className="nav-cta" href={INSTALL_URL}>
           Install app
         </a>
       </header>
@@ -54,7 +57,7 @@ export default function Home() {
               a room, it notices when you pick up your phone, and the host sees who stayed focused.
             </p>
             <div className="hero-actions">
-              <a className="btn btn-primary" href={APP_URL}>
+              <a className="btn btn-primary" href={INSTALL_URL}>
                 Install FocusGuard
               </a>
               <a className="btn btn-quiet" href="#rooms">
@@ -126,7 +129,7 @@ export default function Home() {
       <footer className="foot">
         <div className="foot-inner">
           <p className="foot-line">Put the phone down. Stay for the whole session.</p>
-          <a className="btn btn-primary" href={APP_URL}>
+          <a className="btn btn-primary" href={INSTALL_URL}>
             Install FocusGuard
           </a>
           <p className="foot-note">Runs in your browser. Add it to your home screen to open it full screen. Joining a room takes a phone.</p>
