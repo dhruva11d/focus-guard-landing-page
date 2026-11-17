@@ -13,9 +13,9 @@ const absans = localFont({
 const hand = Reenie_Beanie({ subsets: ["latin"], weight: "400", variable: "--font-hand", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "FocusGuard | Phones down, focus together",
+  title: "FocusGuard | Stay on the tab, focus together",
   description:
-    "A focus timer in your browser. Focus on your own, or join a room, put your phone face down and let the host see who stays focused.",
+    "A focus timer in your browser. Focus on your own, or join a room and let the host see who stays focused.",
   icons: { icon: "/icons/icon-192.png", apple: "/icons/apple-touch-icon.png" },
 };
 

@@ -28,8 +28,8 @@ const LETGO = 3;
 
 const STEPS = [
   { title: "The host opens a room.", body: "Name it, pick a length and share the room code." },
-  { title: "Everyone joins and puts the phone face down.", body: "Members enter the code, allow motion access, then place their phone face down." },
-  { title: "The host sees who stays focused.", body: "Lifting the phone or leaving the tab shows as not focused." },
+  { title: "Everyone joins with the code.", body: "Members enter the room code and wait for the host to start." },
+  { title: "The host sees who stays focused.", body: "Closing the tab or switching away ends the session for that person." },
 ];
 
 const clamp = (v: number) => Math.min(1, Math.max(0, v));
@@ -106,7 +106,7 @@ export function RoomScene() {
       <div className="scene-stage">
         <div className="scene-copy">
           <h2 id="rooms-title" className="scene-title">
-            A room is people agreeing to put the phone down.
+            A room is people agreeing to stay on the page.
           </h2>
           <ol className="scene-steps">
             {STEPS.map((s, i) => (
@@ -118,7 +118,7 @@ export function RoomScene() {
           </ol>
         </div>
 
-        <svg ref={svg} className="scene-svg" viewBox="0 0 1000 700" role="img" aria-label="The host, as one large circle, connects to seven smaller circles, each a person in the room. One of them is marked as not focused after picking up their phone.">
+        <svg ref={svg} className="scene-svg" viewBox="0 0 1000 700" role="img" aria-label="The host, as one large circle, connects to seven smaller circles, each a person in the room. One of them is marked as not focused after leaving the tab.">
           {NODES.map((n, i) => (
             <line
               key={`l${i}`}
@@ -146,7 +146,7 @@ export function RoomScene() {
           ))}
           <g data-note style={{ opacity: 0 }}>
             <text x={NODES[LETGO].x + 4} y={NODES[LETGO].y + NODES[LETGO].r + 46} textAnchor="middle" className="scene-hand">
-              picked it up
+              left the tab
             </text>
           </g>
         </svg>

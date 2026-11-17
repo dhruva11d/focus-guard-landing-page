@@ -18,7 +18,7 @@ const HOW = [
   {
     n: "2",
     title: "Stay with it",
-    body: "On your own, keep the tab open: leaving it ends the session and sounds an alarm. In a room, place your phone face down and leave it there.",
+    body: "Leave FocusGuard open and visible while the timer runs. Closing the tab or switching away ends the session, and on your own an alarm sounds.",
   },
   {
     n: "3",
@@ -51,10 +51,10 @@ export default function Home() {
       <main id="top">
         <section className="hero">
           <div className="hero-copy">
-            <LetterDrop lines={["Phones down.", "Focus together."]} />
+            <LetterDrop lines={["Stay on the tab.", "Focus together."]} />
             <p className="hero-sub">
-              FocusGuard is a focus timer that runs in your browser. On your own, it notices when you leave the tab. In
-              a room, it notices when you pick up your phone, and the host sees who stayed focused.
+              FocusGuard is a focus timer that runs in your browser. Start a session on your own, or join a room. Leave
+              the tab and the session ends, and the host sees who stayed.
             </p>
             <div className="hero-actions">
               <a className="btn btn-primary" href={INSTALL_URL}>
@@ -128,11 +128,11 @@ export default function Home() {
 
       <footer className="foot">
         <div className="foot-inner">
-          <p className="foot-line">Put the phone down. Stay for the whole session.</p>
+          <p className="foot-line">Stay for the whole session.</p>
           <a className="btn btn-primary" href={INSTALL_URL}>
             Install FocusGuard
           </a>
-          <p className="foot-note">Runs in your browser. Add it to your home screen to open it full screen. Joining a room takes a phone.</p>
+          <p className="foot-note">Runs in your browser. Add it to your home screen to open it full screen.</p>
           <p className="foot-copy">© {new Date().getFullYear()} FocusGuard</p>
         </div>
       </footer>

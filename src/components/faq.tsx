@@ -5,31 +5,27 @@ import { useId, useState } from "react";
 const ITEMS = [
   {
     q: "Where does FocusGuard run?",
-    a: "In your browser, with nothing to download from a store. Add it to your home screen and it opens full screen like an app. To join a room, open the link on your phone: Safari on iPhone, Chrome on Android.",
+    a: "In your browser, on your phone or your computer. There is nothing to download from a store. Add it to your home screen and it opens full screen like an app.",
   },
   {
-    q: "How does a room know my phone is face down?",
-    a: "FocusGuard reads your phone's motion sensor through the browser. On iPhone you tap Allow when it asks for motion access. While a session runs, your screen is kept awake so the page stays open.",
+    q: "What happens if I leave the tab?",
+    a: "Closing the tab, switching to another tab or app, or locking your screen ends the session right away. On your own, an alarm sounds and the session is saved as interrupted. In a room, it ends for you and the host sees you as not focused.",
   },
   {
-    q: "What counts as an interruption in a room?",
-    a: "Leaving the tab, or lifting your phone for more than a couple of seconds. It stays counted until you place the phone face down again.",
-  },
-  {
-    q: "What happens if I leave during a solo session?",
-    a: "Personal focus runs on its own, without the sensor. Leaving the tab ends the session right away, an alarm sounds and the session is saved as interrupted.",
+    q: "Can I use it alone?",
+    a: "Yes. Personal focus is a timer just for you. Your history shows total focus time, completed and interrupted sessions, average length and your longest uninterrupted session.",
   },
   {
     q: "How do rooms work?",
     a: "A host creates a room with a name and a focus length, then shares the room code. You enter the code once to become a member. When the host starts a session, everyone counts down the same timer.",
   },
   {
-    q: "What does the host see?",
-    a: "A list of everyone in the session with their status: preparing, focused, not focused, away or disconnected. The host can also end the session for everyone.",
+    q: "Who can create a room?",
+    a: "Hosts can. Everyone else joins with a room code.",
   },
   {
-    q: "Can I join a room from a laptop?",
-    a: "Members need a phone, because the face-down check uses its motion sensor. A host can run the dashboard from any device.",
+    q: "What does the host see?",
+    a: "A list of everyone in the session with their status: preparing, focused, not focused, away or disconnected. The host can also end the session for everyone.",
   },
   {
     q: "Do I need an account?",
